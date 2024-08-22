@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* container */
+
+/* mv */
+#mv { position: relative; background: #e5e5e5; width: 100%; height: 500px;}
+
+#mv .mv_bg img { position: absolute; top: 0; left: 0; display: block; width: 1920px; height: 500px; object-fit: cover;}
+
+#mv .depth_sec { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 70%; height: 80px; background: #fff; border-radius: 50px 50px 0 0;}
+#mv .depth_sec ul { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; }
+
+#mv .depth_sec ul li { width: calc(100% / 2); height: 100%;}
+#mv .depth_sec ul li a { width: 100%; height: 100%; display: block; padding-top: 25px; font-size: 25px; text-align: center;}
+
+#mv .depth_sec ul li.on a { background: #040F67; color: #fff; font-weight: 700; border-radius: 40px 0 0 0;}
+/* #mv .depth_sec ul li:hover a { background: #040F67; color: #fff;} */
+
+@media (max-width:768px) {
+    #mv .depth_sec ul { flex-wrap: wrap;}
+    #mv .depth_sec ul li { display: none;}
+    #mv .depth_sec ul li.on { display: block; width: 100%; background: #040F67; color: #fff; font-weight: 700;  border-radius: 40px 40px 0 0; overflow: hidden;}
+}
+
+
+/* info */
+#info { width: 100%; height: 100%; margin: 0 auto;}
+#info .beerinfo { display:flex; flex-wrap: wrap; gap:20px;}
+#info .box { width: calc((100% - 40px) / 3); height: calc((100% - 40px) / 3); text-align: center; padding-bottom: 1%;}
+#info .imgbox { width: 100%; height: calc(100% - 20%); border-radius: 40px; align-items: center; padding: 50px 0; }
+#info .box span {font-size:2rem; font-weight: 700;}
+#info .box p {font-size:1.4rem; padding: 20px 0; }
+
+.img1 {background: #DB7716 ;}
+.img2 {background:#7F433F;}
+.img3 {background:#AE3117;}
+.img4 {background:#6F982F;}
+.img5 {background:#1995AA;}
+.img6 {background:#19B2E4;}
+.img7 {background: linear-gradient(90deg, rgba(228,160,91,1) 0%, rgba(163,43,23,1) 100%);}
+.img8 {background:#E5B310;}
+.img9 {background:#FDD784;}
+
+
+@media (max-width:768px) {
+  #info .beerinfo .box { width: 100%;}
+}

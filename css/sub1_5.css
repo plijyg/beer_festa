@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+#wrap { overflow: hidden;}
+
+/* mv */
+#mv { position: relative; background: #e5e5e5; width: 100%; height: 500px;}
+
+#mv .mv_bg img { position: absolute; top: 0; left: 0; display: block; width: 1920px; height: 500px; object-fit: cover;}
+
+#mv .depth_sec { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 70%; height: 80px; background: #fff; border-radius: 50px 50px 0 0;}
+#mv .depth_sec ul { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; }
+
+#mv .depth_sec ul li { width: calc(100% / 3); height: 100%;}
+#mv .depth_sec ul li a { width: 100%; height: 100%; display: block; padding-top: 25px; font-size: 25px; text-align: center;}
+
+#mv .depth_sec ul li.on a { background: #040F67; color: #fff; font-weight: 700;}
+/* #mv .depth_sec ul li:hover a { background: #040F67; color: #fff;} */
+
+@media (max-width:768px) {
+    #mv .depth_sec ul { flex-wrap: wrap;}
+    #mv .depth_sec ul li { display: none;}
+    #mv .depth_sec ul li.on { display: block; width: 100%; background: #040F67; color: #fff; font-weight: 700;  border-radius: 40px 40px 0 0; overflow: hidden;}
+}
+
+/* evt */
+
+#evt { position: relative; background: #fff;}
+#evt .inner { width: 100%; height: 100%; }
+
+#evt .evt_tit { display: flex; gap: 10px; align-items: center; margin-bottom: 30px; }
+#evt .evt_tit img { display: block; width: 50px; height: 40px;}
+#evt .evt_tit h2 { font-size: 3rem;}
+
+#evt .evt_intro { display: flex; border-bottom: 1px solid #ccc; align-items: center; }
+#evt .evt_left { width: 630px; }
+#evt .evt_left img { width: 500px; height: 500px; }
+
+
+#evt .evt_right { width: calc(100% - 630px); position: relative; }
+#evt .evt_right h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; }
+#evt .evt_right h4 { font-size: 2rem; font-weight: 700;  }
+#evt .evt_right p { font-size: 1.6rem; margin-left: 28px; padding: 7px 0; }
+#evt .evt_right p span { position: relative;}
+#evt .evt_right p span::before { content: ''; position: absolute; top: 50%; left: -10px; transform: translateY(-50%); width: 3px; height: 3px; border-radius: 50%; background: #000;}
+#evt .evt_right p:last-child { margin-bottom: 20px; }
+
+/* evt2 */
+
+#evt2 { background: #fff; padding: 0 6%;}
+#evt2 .inner { width: 100%; height: 100%;}
+
+#evt2 .evt_tit { display: flex; gap: 10px; padding-bottom: 5%; align-items: center; }
+#evt2 .evt_tit img { display: block; width: 50px; height: 40px;}
+#evt2 .evt_tit h2 { font-size: 3rem;}
+
+#evt2 .evt2_intro { display: flex; align-items: center; gap: 100px; flex-direction: row-reverse;}
+#evt2 .evt2_right { float: right;}
+#evt2 .evt2_right img { width: 100%; height: 100%; }
+
+#evt2 .evt2_left { float: left; margin-left: 20px; }
+#evt2 .evt2_left h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; }
+#evt2 .evt2_left h4 { font-size: 2rem; font-weight: 700;  }
+#evt2 .evt2_left p { font-size: 1.6rem; margin-left: 28px; padding: 7px 0; }
+#evt2 .evt2_left p span { position: relative;}
+
+#evt2 .evt2_left p span::before { content: ''; position: absolute; top: 50%; left: -10px; transform: translateY(-50%); width: 3px; height: 3px; border-radius: 50%; background: #000;}
+#evt2 .evt2_left p:last-child { margin-bottom: 20px; }
+
+
+
+@media (max-width:768px) {
+    #evt { padding: 50px 6%; font-size: 1.5rem;}
+    #evt .evt_intro { flex-wrap: wrap; padding-bottom: 50px;}
+    #evt .evt_left { width: 100%;}
+    #evt .evt_left img { width: 100%; height: 100%;}
+    #evt .evt_right { width: 100%;}
+    #evt .evt_tit h2 { font-size: 2.5rem;}
+    #evt .evt_right h3 { font-size: 2rem;}
+    #evt .evt_right h4 { font-size: 1.7rem;}
+    #evt .evt_right p { font-size: 1.5rem;}
+
+    #evt2 { padding: 0 6% 50px; font-size: 1.5rem;}
+    #evt2 .evt2_intro { flex-wrap: wrap; flex-direction: row; gap: 50px; padding-top: 20px;}
+    #evt2 .evt2_intro .evt2_left { width: 100%;}
+    #evt2 .evt2_left { width: 100%; height: 100%;}
+    #evt2 .evt2_intro .evt2_right { width: 100%; }
+    #evt2 .evt2_right img { width: 100%; height: 100%;}
+
+    #evt2 .evt_tit h2 { font-size: 2.5rem;}
+    #evt2 .evt2_left h3 { font-size: 2rem;}
+    #evt2 .evt2_left h4 { font-size: 1.7rem;}
+    #evt2 .evt2_left p { font-size: 1.5rem;}
+}
